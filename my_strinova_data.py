@@ -69,5 +69,5 @@ for idx, (t_name, points) in enumerate(groups.items()):
     )
 
 # ---------- 5. 输出 HTML ----------
-scatter3d.render("scatter3d.html")
-print("File ready: scatter3d.html")
+scatter3d.render("index.html")
+print("File ready: index.html")
