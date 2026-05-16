@@ -4,6 +4,7 @@ from collections import defaultdict
 from pyecharts.charts import Scatter3D, Timeline
 from pyecharts import options as opts
 from pyecharts.globals import ThemeType
+import time
 
 # ---------- 1. 读取数据，按 t 分组 ----------
 groups = defaultdict(list)
@@ -41,7 +42,7 @@ colors = [
 # ---------- 4. 创建 3D 散点图 ----------
 scatter3d = Scatter3D(init_opts=opts.InitOpts(width="100vw", height="100vh", theme=ThemeType.WHITE))
 scatter3d.set_global_opts(
-    title_opts=opts.TitleOpts(title="Strinova Data Statistics"),
+    title_opts=opts.TitleOpts(title=f"Strinova Data Statistics (Updated at {time.time()})"),
     legend_opts=opts.LegendOpts(pos_top="5%", type_="scroll"),
 )
 
