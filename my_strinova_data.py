@@ -42,7 +42,7 @@ colors = [
 # ---------- 4. 创建 3D 散点图 ----------
 scatter3d = Scatter3D(init_opts=opts.InitOpts(width="100vw", height="100vh", theme=ThemeType.WHITE))
 scatter3d.set_global_opts(
-    title_opts=opts.TitleOpts(title=f"Strinova Data Statistics (Updated at {time.time()})"),
+    title_opts=opts.TitleOpts(title=f"Strinova Data Statistics (Updated at {time.asctime()})"),
     legend_opts=opts.LegendOpts(pos_top="5%", type_="scroll"),
 )
 
