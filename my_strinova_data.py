@@ -51,7 +51,7 @@ for idx, (t_name, points) in enumerate(groups.items()):
     color = colors[idx % len(colors)]
     scatter3d.add(
         series_name=t_name,
-        data=[[p[0], p[1], p[0]+p[1]] for p in points],   # [[b, c, a], ...]
+        data=[[p[0], p[1], p[1]/(p[0]+p[1])] for p in points],   # [[b, c, a], ...]
         xaxis3d_opts=opts.Axis3DOpts(
             name="Output",
             type_="value",
@@ -61,7 +61,7 @@ for idx, (t_name, points) in enumerate(groups.items()):
             type_="value",
         ),
         zaxis3d_opts=opts.Axis3DOpts(
-            name="Rank",
+            name="Tactical Ratio",
             type_="value",
         ),
         grid3d_opts=opts.Grid3DOpts(width=100,depth=100,height=100,is_show=True),
