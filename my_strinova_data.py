@@ -51,7 +51,7 @@ for idx, (t_name, points) in enumerate(groups.items()):
     color = colors[idx % len(colors)]
     scatter3d.add(
         series_name=t_name,
-        data=[list(p) for p in points],   # [[b, c, a], ...]
+        data=[[p[0], p[1], p[0]+p[1]] for p in points],   # [[b, c, a], ...]
         xaxis3d_opts=opts.Axis3DOpts(
             name="Output",
             type_="value",
